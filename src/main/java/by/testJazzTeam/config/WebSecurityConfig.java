@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             User user = userRepo.findById(id).orElseGet(()->{
                 User newUser = new User();
 
-                newUser.setId(id);
+                newUser.setId((String) map.get("sub"));
                 newUser.setName((String) map.get("name"));
                 newUser.setEmail((String) map.get("email"));
                 newUser.setGender((String) map.get("gender"));

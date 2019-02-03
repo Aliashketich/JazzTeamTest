@@ -4,7 +4,7 @@ import org.hibernate.boot.MappingException;
 import org.hibernate.dialect.identity.IdentityColumnSupportImpl;
 
 
-public class SQLiteIdentityColumnSupport extends IdentityColumnSupportImpl {
+    public class SQLiteIdentityColumnSupport extends IdentityColumnSupportImpl {
 
     @Override
     public boolean supportsIdentityColumns() {
@@ -19,7 +19,7 @@ public class SQLiteIdentityColumnSupport extends IdentityColumnSupportImpl {
 
     @Override
     public String getIdentityColumnString(int type) throws MappingException {
-        return "varchar";
+        return "integer";
     }
 
 }

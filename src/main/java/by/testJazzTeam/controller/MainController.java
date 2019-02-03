@@ -19,7 +19,7 @@ public class MainController {
     private final CommandRepo commandRepo;
     private final RobotRepo robotRepo;
 
-    @Value("${spring.profile.active}")
+    @Value("dev")
     private String profile;
 
     @Autowired
